@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.cudenver.university_official_enrique.Controller">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="1080.0" tabClosingPolicy="UNAVAILABLE" GridPane.valignment="TOP">
+        <tabs>
+          <Tab text="Add Student">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="416.0" layoutY="95.0" prefHeight="164.0" prefWidth="576.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="266.0" minWidth="10.0" prefWidth="96.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="480.0" minWidth="10.0" prefWidth="480.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="58.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="125.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="125.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="172.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Student Name" />
+                              <Label text="Student DOB" GridPane.rowIndex="1" />
+                              <DatePicker fx:id="dtpStudentDOB" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="textStudentName" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                              <GridPane GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Button fx:id="btnAddUndergraduate" mnemonicParsing="false" onAction="#addUndergraduateStudent" text="Add Undergraduate" GridPane.halignment="CENTER" />
+                                    <Button fx:id="btnAddMaster" mnemonicParsing="false" onAction="#addMasterStudent" text="Add Master" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                                    <Button mnemonicParsing="false" onAction="#addPhDStudent" text="Add Phd" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                                 </children>
+                              </GridPane>
+                              <Label text="PhD Dissertation" GridPane.rowIndex="2" />
+                              <TextField fx:id="txtPhdDissertation" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="63.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/Student.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Add Course">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="593.0" layoutY="45.0" prefHeight="207.0" prefWidth="432.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button fx:id="btnAddCourse" mnemonicParsing="false" onAction="#addCourse" text="Add course" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                              <Label text="Course Subject" />
+                              <Label text="Course Number" GridPane.rowIndex="1" />
+                              <Label text="Course Title" GridPane.rowIndex="2" />
+                              <TextField fx:id="txtCourseNumber" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <ComboBox fx:id="seleCourseSubject" prefWidth="150.0" promptText="Select course" GridPane.columnIndex="1" />
+                              <TextField fx:id="txtCourseTitle" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="84.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/Image.png" />
+                           </image>
+                        </ImageView>
+                        <GridPane layoutX="410.0" layoutY="276.0" prefHeight="407.0" prefWidth="1175.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tabListStudents" onSelectionChanged="#listStudentsUpdate" text="List Students">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView layoutX="88.0" layoutY="31.0" prefHeight="599.0" prefWidth="921.0" />
+                        <ListView fx:id="LstStudent" layoutX="141.0" layoutY="92.0" prefHeight="493.0" prefWidth="820.0" />
+                        <Label layoutX="141.0" layoutY="31.0" prefHeight="17.0" prefWidth="815.0" text="Student List">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+                </content>
+            </Tab>
+            <Tab fx:id="tabListcourses" onSelectionChanged="#listCoursesUpdate" text="List Courses">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                            <ListView layoutX="88.0" layoutY="31.0" prefHeight="599.0" prefWidth="921.0" />
+                            <ListView fx:id="lstCourses" layoutX="141.0" layoutY="92.0" prefHeight="493.0" prefWidth="820.0" />
+                            <Label layoutX="141.0" layoutY="31.0" prefHeight="17.0" prefWidth="815.0" text="Course List">
+                                <font>
+                                    <Font size="36.0" />
+                                </font>
+                            </Label>
+                        </children></AnchorPane>
+                </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <GridPane prefHeight="50.0" prefWidth="1076.0" GridPane.rowIndex="1">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btnExit" mnemonicParsing="false" onAction="#exitApplication" prefHeight="25.0" prefWidth="102.0" text="Exit" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+            <Button mnemonicParsing="false" onAction="#saveToFile" text="Save To File" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+            <Button mnemonicParsing="false" onAction="#loadFromButton" prefHeight="25.0" prefWidth="211.0" text="Load From File" GridPane.halignment="CENTER" />
+         </children>
+      </GridPane>
+   </children>
+</GridPane>
